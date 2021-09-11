@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-11T03:35:01.408Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="20V7y8iJ-q71lZ-57RXZ" version="15.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-11T03:42:29.151Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="34M2UYbYy4eW1gol-UT0" version="15.1.4" type="github">
   <diagram id="YMKnsX9WFYiv6ulReiZl" name="Page-1">
     <mxGraphModel dx="1357" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -81,6 +81,9 @@
         </mxCell>
         <mxCell id="HH-IyCXYIKVdE9AgVYMC-42" value="&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;是8核16G的机器来部署MySQL，那你作为项目的Java架构师，心里大致就该知道你这个数据库后续每秒抗个一&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;两千请求还是可以的，如果你申请的是16核32G的机器，那你心里就知道妥妥可以抗个每秒两三千，甚至三四千的请求&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry y="2350" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HH-IyCXYIKVdE9AgVYMC-43" value="&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;就QPS而言，他的英文全称是：Query Per Second。&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;其实就是英文字面意思已经很明确了，QPS就是说，你的这个数据库每秒可以处理多少个请求，你大致可以理解为，一次请求&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;就是一条SQL语句，也就是说这个数据库每秒可以处理多少个SQL语句。&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;对于QPS而言，其实你的一些Java系统或者中间件系统在进行压测的时候，也可以使用这个指标，也就是说，你的Java系统每&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;秒可以处理多少个请求。&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;然后另外一个术语是TPS，他的英文全称是：Transaction Per Second。其实就是每秒可处理的事务量，这个TPS往往是用在&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;数据库中较多一些，其实从字面意思就能看的出来，他就是说数据库每秒会处理多少次事务提交或者回滚。&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="2460" width="740" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
