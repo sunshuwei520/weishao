@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-11T02:43:00.363Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="pmTB1AS97i5ptfJr9633" version="15.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-11T03:35:01.408Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="20V7y8iJ-q71lZ-57RXZ" version="15.1.4" type="github">
   <diagram id="YMKnsX9WFYiv6ulReiZl" name="Page-1">
     <mxGraphModel dx="1357" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -72,6 +72,15 @@
         </mxCell>
         <mxCell id="HH-IyCXYIKVdE9AgVYMC-39" value="&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53) ; font-weight: bold&quot;&gt;8、基于更新数据的流程，总结一下InnoDB存储引擎的架构原理&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;大家通过一次更新数据的流程，就可以清晰地看到，InnoDB存储引擎主要就是包含了一些buffer pool、redo log&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;buffer等内存里的缓存数据，同时还包含了一些undo日志文件，redo日志文件等东西，同时mysql server自己还有&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;binlog日志文件。&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;在你执行更新的时候，每条SQL语句，都会对应修改buffer pool里的缓存数据、写undo日志、写redo log buffer几&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;个步骤；&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;但是当你提交事务的时候，一定会把redo log刷入磁盘，binlog刷入磁盘，完成redo log中的事务commit标记；最后&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;后台的IO线程会随机的把buffer pool里的脏数据刷入磁盘里去。&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry y="2060" width="810" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="HH-IyCXYIKVdE9AgVYMC-40" value="&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;一般8核16G的机器部署的MySQL数据库，每秒抗个一两千并发请求是没问题的&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry y="2260" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HH-IyCXYIKVdE9AgVYMC-41" value="&#xa;&#xa;&#xa;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;一般Java应用系统部署在4核8G的机器上，每秒钟抗下500左右&#xa;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;的并发访问量，差不多是比较合适的，当然这个也不一定。因为你得考虑一下，假设你每个请求花费1s可以处理完，那么你一&#xa;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;台机器每秒也许只可以处理100个请求，但是如果你每个请求只要花费100ms就可以处理完，那么你一台机器每秒也许就可以&#xa;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;处理几百个请求&lt;/span&gt;&lt;/div&gt;&#xa;&#xa;&#xa;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="300" y="2240" width="430" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HH-IyCXYIKVdE9AgVYMC-42" value="&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;是8核16G的机器来部署MySQL，那你作为项目的Java架构师，心里大致就该知道你这个数据库后续每秒抗个一&lt;br/&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 9.8125pt ; color: rgb(53 , 53 , 53)&quot;&gt;两千请求还是可以的，如果你申请的是16核32G的机器，那你心里就知道妥妥可以抗个每秒两三千，甚至三四千的请求&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry y="2350" width="450" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
