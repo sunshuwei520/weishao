@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-11T02:31:01.079Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="xLWbpeLxM3VUMs1MmH6R" version="15.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-11T02:32:01.313Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="wDfCeHmtgG2L_gX_Cdip" version="15.1.4" type="github">
   <diagram id="YMKnsX9WFYiv6ulReiZl" name="Page-1">
     <mxGraphModel dx="1357" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -20,7 +20,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="HH-IyCXYIKVdE9AgVYMC-3" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;bing log&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(53 , 53 , 53) ; font-size: 10.4667pt&quot;&gt;属于mysql server&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="20" y="1360" width="120" height="60" as="geometry" />
+          <mxGeometry x="45" y="1360" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HH-IyCXYIKVdE9AgVYMC-4" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="80" width="370" height="190" as="geometry" />
@@ -49,9 +49,6 @@
         <mxCell id="HH-IyCXYIKVdE9AgVYMC-17" value="&lt;span&gt;状态为2时：&lt;/span&gt;&lt;span style=&quot;color: rgb(53 , 53 , 53) ; font-size: 10.4667pt&quot;&gt;你提交事务之后，redo log可能仅仅停留在os cache内存缓存里，没实际进入磁盘文件，万一此时你要&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;是机器宕机了，那么os cache里的redo log就会丢失，同样会让你感觉提交事务了，结果数据丢了&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;gradientColor=#ea6b66;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="640" y="1010" width="120" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="HH-IyCXYIKVdE9AgVYMC-25" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="1580" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="HH-IyCXYIKVdE9AgVYMC-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HH-IyCXYIKVdE9AgVYMC-26" target="HH-IyCXYIKVdE9AgVYMC-28">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -59,13 +56,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="HH-IyCXYIKVdE9AgVYMC-26" value="&lt;span&gt;两种状态：&lt;/span&gt;&lt;span style=&quot;color: rgb(53 , 53 , 53) ; font-size: 10.4667pt ; font-weight: bold&quot;&gt;sync_binlog&lt;/span&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;推荐设置为1&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
-          <mxGeometry x="240" y="1350" width="200" height="80" as="geometry" />
+          <mxGeometry x="265" y="1350" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="HH-IyCXYIKVdE9AgVYMC-28" value="&lt;span&gt;状态为0时：&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
-          <mxGeometry x="580" y="1300" width="120" height="60" as="geometry" />
+        <mxCell id="HH-IyCXYIKVdE9AgVYMC-28" value="&lt;span&gt;状态为0时：&lt;/span&gt;&lt;span style=&quot;color: rgb(53 , 53 , 53) ; font-size: 10.4667pt&quot;&gt;此时你把binlog写入磁盘的时候，其实不是直接进入磁盘文件，而是进入os cache内存缓存。&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;所以跟之前分析的一样，如果此时机器宕机，那么你在os cache里的binlog日志是会丢失的&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#996185;fillColor=#e6d0de;gradientColor=#d5739d;" vertex="1" parent="1">
+          <mxGeometry x="630" y="1250" width="120" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="HH-IyCXYIKVdE9AgVYMC-30" value="状态为1时：&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;那么此时会强制在提交事务的时候，把binlog直接写入到磁盘文件里去，&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;那么这样提交事务之后，哪怕机器宕机，磁盘上的binlog是不会丢失的&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
-          <mxGeometry x="580" y="1430" width="120" height="170" as="geometry" />
+        <mxCell id="HH-IyCXYIKVdE9AgVYMC-30" value="状态为1时：&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;那么此时会强制在提交事务的时候，把binlog直接写入到磁盘文件里去，&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10.4667pt ; color: rgb(53 , 53 , 53)&quot;&gt;那么这样提交事务之后，哪怕机器宕机，磁盘上的binlog是不会丢失的&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;gradientColor=#97d077;" vertex="1" parent="1">
+          <mxGeometry x="630" y="1460" width="120" height="170" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
