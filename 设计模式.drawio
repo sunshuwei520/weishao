@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-09-16T01:42:19.766Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="A3Vj2Rd-pqNxU0A5A_Wg" version="15.2.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-16T01:56:05.637Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="CbnYzzTdejMSpO3lTxP9" version="15.2.5" type="github">
   <diagram id="qfg6DkLslFfLmVTa4DtD" name="Page-1">
-    <mxGraphModel dx="934" dy="739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="910" dy="597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,13 +8,38 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="c6qmfLmRiGYA_ViMvxz2-1" value="原型模式" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="90" y="180" width="120" height="60" as="geometry" />
+          <mxGeometry x="20" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6qmfLmRiGYA_ViMvxz2-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6qmfLmRiGYA_ViMvxz2-2" target="c6qmfLmRiGYA_ViMvxz2-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="210" />
+              <mxPoint x="570" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c6qmfLmRiGYA_ViMvxz2-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6qmfLmRiGYA_ViMvxz2-2" target="c6qmfLmRiGYA_ViMvxz2-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="210" />
+              <mxPoint x="570" y="120" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="c6qmfLmRiGYA_ViMvxz2-2" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;数据在各层之间实体类相互转换（深拷贝）&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="500" y="180" width="260" height="60" as="geometry" />
+          <mxGeometry x="250" y="180" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="c6qmfLmRiGYA_ViMvxz2-4" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;使用场景&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="320" y="180" width="60" height="20" as="geometry" />
+          <mxGeometry x="180" y="180" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c6qmfLmRiGYA_ViMvxz2-5" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;动态代理&lt;br&gt;1.cglib BeanCopier&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="590" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6qmfLmRiGYA_ViMvxz2-7" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;反射&lt;br&gt;1.apache Beantils&lt;br&gt;2.apache PropertyUtils&lt;br&gt;3.spring Beantils&lt;br&gt;（性能差，不推荐使用）&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;strokeColor=#d6b656;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="590" y="90" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c6qmfLmRiGYA_ViMvxz2-9" value="&lt;pre style=&quot;background-color: #1e222d ; color: #e2e2e2 ; font-family: &amp;quot;consolas&amp;quot; , monospace ; font-size: 10.5pt&quot;&gt;&lt;span style=&quot;color: #379e56&quot;&gt;BeanUtils&lt;/span&gt;&lt;span style=&quot;color: #f0efd0&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #9393cc&quot;&gt;copyProperties&lt;/span&gt;&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="170" width="210" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
